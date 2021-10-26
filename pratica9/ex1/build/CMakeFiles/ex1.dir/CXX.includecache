@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cicero/c++/c++_ufv/prog2/pratica9/ex1/include/mdc.h
+
+/home/cicero/c++/c++_ufv/prog2/pratica9/ex1/include/power.h
+
+/home/cicero/c++/c++_ufv/prog2/pratica9/ex1/include/soma.h
+
+/home/cicero/c++/c++_ufv/prog2/pratica9/ex1/src/main.cpp
+iostream
+-
+../include/soma.h
+/home/cicero/c++/c++_ufv/prog2/pratica9/ex1/include/soma.h
+../include/power.h
+/home/cicero/c++/c++_ufv/prog2/pratica9/ex1/include/power.h
+../include/mdc.h
+/home/cicero/c++/c++_ufv/prog2/pratica9/ex1/include/mdc.h
+
+/home/cicero/c++/c++_ufv/prog2/pratica9/ex1/src/mdc.cpp
+iostream
+-
+../include/mdc.h
+/home/cicero/c++/c++_ufv/prog2/pratica9/ex1/include/mdc.h
+
+/home/cicero/c++/c++_ufv/prog2/pratica9/ex1/src/power.cpp
+iostream
+-
+../include/power.h
+/home/cicero/c++/c++_ufv/prog2/pratica9/ex1/include/power.h
+
+/home/cicero/c++/c++_ufv/prog2/pratica9/ex1/src/soma.cpp
+iostream
+-
+../include/soma.h
+/home/cicero/c++/c++_ufv/prog2/pratica9/ex1/include/soma.h
+
