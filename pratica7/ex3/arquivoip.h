@@ -5,6 +5,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <stdexcept>
 #include <cstring>
 #include <cstdlib>
 
@@ -13,7 +14,7 @@ using namespace std;
 class ArquivoIP{
 private:
     ifstream _fin;
-    ifstream _fout;
+    ofstream _fout;
 
     vector<string> _IPs;
     vector<string> _IPs_validos;

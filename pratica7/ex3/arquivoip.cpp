@@ -122,28 +122,38 @@ void ArquivoIP::checa_IP(){
 }
 
 ArquivoIP::ArquivoIP(){
-    _fin.open("entrada.txt");
-    _fout.open("saida.txt");
+    try{
+        _fin.open("entrada.txt");
+        if(_fin.fail())
+            throw runtime_error("Could not open file");
+    } catch(exception &ex){
+        cerr << ex.what() << endl;
+        exit(1);
+    }
+
+    try{
+        _fout.open("ips.txt");
+        if(_fout.fail())
+            throw runtime_error("Could not open file");
+    } catch(exception &ex){
+        cerr << ex.what() << endl;
+        exit(1);
+    }
 
     preenche_vector();
 
-    for(int i = 0; i < _IPs.size(); i++){
-    cout << _IPs[i] << endl;
-    }
-    cout << endl << endl;
-
     checa_IP();
 
-    cout << endl << "VALIDOS" << endl;
+    _fout << endl << "VALIDOS" << endl;
     for(int i = 0; i < _IPs_validos.size(); i++)
-        cout << _IPs_validos[i] << endl;
-    cout << endl << endl;
+        _fout << _IPs_validos[i] << endl;
+    _fout << endl << endl;
 
-    cout << endl << "INVALIDOS" << endl;
+    _fout << endl << "INVALIDOS" << endl;
     for(int i = 0; i < _IPs_invalidos.size(); i++){
-        cout << _IPs_invalidos[i] << endl;
+        _fout << _IPs_invalidos[i] << endl;
     }
-    cout << endl << endl;
+    _fout << endl << endl;
 
     _fin.close();
     _fout.close();
